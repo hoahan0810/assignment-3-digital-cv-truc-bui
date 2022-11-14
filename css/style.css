@@ -1,0 +1,402 @@
+:root {
+  --banner-url: url(../images/banner.jpg);
+}
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(248, 248, 248);
+}
+section {
+  margin-top: 64px;
+}
+h2 {
+  color: #2b7a0b;
+}
+
+/* 1- STYLE BANNER */
+header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      rgba(106, 106, 106, 0.5),
+      rgba(106, 106, 106, 0.5)
+    ),
+    var(--banner-url);
+  background-size: cover;
+  position: relative;
+}
+@media (max-height: 500px) {
+  header {
+    height: 300px;
+  }
+}
+.banner {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner h1 {
+  font-size: 44px;
+}
+.banner p {
+  margin-top: 24px;
+  font-size: 24px;
+  color: rgb(235, 233, 233);
+}
+
+/* 2- STYLE NAV BAR */
+.nav-bar {
+  margin-top: 10px;
+}
+.nav-bar-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.nav-bar a:link,
+.nav-bar a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #212529;
+  border-left: 1px solid rgba(33, 37, 41, 0.1);
+  padding: 10px;
+  padding-left: 20px;
+  text-align: center;
+}
+.nav-bar a:link:nth-child(2) {
+  margin-right: 60px;
+}
+.nav-bar a:link:nth-child(4) {
+  margin-left: 60px;
+}
+.nav-bar div {
+  display: inline-block;
+  position: relative;
+}
+.nav-bar h2 {
+  font-size: 24px;
+}
+
+.img-avatar {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+.nav-bar i {
+  margin-left: 5px;
+  font-size: 16px;
+  color: #2b7a0b;
+}
+
+/* 3-STYLE PERSONAL INFO */
+.target-person-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+  column-gap: 48px;
+}
+.target p {
+  text-indent: 20px;
+  line-height: 1.6;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.personal-info {
+  justify-self: center;
+}
+
+.personal-info table {
+  border-style: none;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.personal-info th {
+  vertical-align: top;
+  width: 90px;
+}
+.personal-info th,
+.personal-info td {
+  padding: 3px;
+  border-style: none;
+}
+
+/* style deadlink-info part */
+.personal-link:link,
+.personal-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+.personal-link:hover {
+  cursor: pointer;
+  color: #2b7a0b;
+}
+/* .... */
+
+.icon-info-block {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.icon-info-block a:link,
+.icon-info-block a:visited {
+  display: inline-block;
+  font-size: 20px;
+  color: #1e5508;
+}
+.icon-info-block a:hover {
+  cursor: pointer;
+}
+
+/* 4- STYLE BACKGROUND INFO */
+.background-content {
+  /* background-color: rgb(153, 113, 113); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 500px);
+  gap: 40px;
+  line-height: 1.5;
+}
+.background-content > div {
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  padding: 0 30px 20px;
+
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 100px 1fr;
+}
+.background-content h2,
+.background-content .icon-background {
+  justify-self: center;
+  align-self: center;
+}
+.icon-background {
+  font-size: 36px;
+  color: #2b7a0b;
+}
+.background-details {
+  grid-column: 1/-1;
+}
+.time {
+  font-size: 14px;
+  color: #495057;
+}
+.details {
+  color: #343a40;
+}
+
+.background-info-details {
+  padding-left: 30px;
+  position: relative;
+}
+.background-info-details > p:first-child::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #1e5508;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.experience .background-details,
+.education .background-details,
+.activity .background-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hobby-detail {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.icon-hobby {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  color: #2b7a0b;
+  border: 1px solid #2b7a0b;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* 6- STYLE LANGUAGE, SKILL */
+.points {
+  display: flex;
+  gap: 5px;
+}
+.blue-point,
+.grey-point {
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+.blue-point {
+  background-color: #2b7a0b;
+}
+.grey-point {
+  background-color: #acacac;
+}
+.skill-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 7- STYLE CERTIFICATE */
+.certificate-content {
+  padding: 0 30px;
+}
+.certificate-content h2 {
+  text-align: left;
+  margin-bottom: 0;
+}
+.certificate-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.certificate-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  padding-left: 0;
+  border-bottom: 2px solid #d6c08d;
+}
+.certificate-info:nth-child(2)::before {
+  content: "";
+  height: 100%;
+  border-left: 2px solid #d6c08d;
+}
+.certificate-info:last-child {
+  border: none;
+}
+.certificate-info img {
+  width: 30%;
+}
+
+/* 8- STYLE PROJECT */
+.project-content {
+  padding: 0 30px;
+}
+.project-content h2 {
+  text-align: left;
+}
+.project-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.project-name {
+  border: 1px solid #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1.5;
+}
+.project-name-time {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #343a40;
+}
+.project-name img {
+  width: 100%;
+}
+.project-name p {
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.project-name table {
+  border-collapse: collapse;
+  color: #343a40;
+  font-size: 14px;
+}
+.project-name table td {
+  padding: 10px;
+  border-top: 1px solid #d4d4d4;
+}
+.project-name table tr:first-child td {
+  border-top: 3px solid #d4d4d4;
+}
+.project-name table td:first-of-type {
+  width: 100px;
+}
+.project-name-time {
+  border-top: 1px solid #d4d4d4;
+  padding-top: 5px;
+}
+
+.project-name-time div:first-child {
+  background-color: #2b7a0b;
+  color: rgb(230, 230, 230);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.project-name-time i {
+  margin-right: 5px;
+  color: #2b7a0b;
+}
+
+/* 9- STYLE FOOTER - CONTACT */
+.footer-content {
+  margin-top: 60px;
+  padding: 30px 0;
+}
+.contact {
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.contact li {
+  display: inline-block;
+}
+.contact li a:link,
+.contact li a:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #343a40;
+}
+.contact li a:hover {
+  color: #2b7a0b;
+}
+.contact li i {
+  color: #2b7a0b;
+  font-size: 32px;
+}
+
+/* 10- CHANGE MY INFOMATION */
+/* 11- MY IMAGE IN NAVBAR */
+/* ----> đã chèn vào các phần tương ứng */

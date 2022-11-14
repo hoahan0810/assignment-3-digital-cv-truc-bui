@@ -1,0 +1,81 @@
+/* NAV BAR */
+@media (max-width: 992px) {
+  .nav-bar a:link:nth-child(2) {
+    margin-right: 0;
+  }
+  .nav-bar a:link:nth-child(4) {
+    margin-left: 0;
+  }
+}
+
+/* STYLE PERSONAL INFO AND OBJECTIVE */
+@media (max-width: 992px) {
+  .target-person-info {
+    margin-top: 2.5rem;
+    padding: 1.2rem;
+  }
+  .target p {
+    line-height: 1.8;
+  }
+  .personal-info th {
+    width: 80px;
+  }
+}
+
+/* STYLE BACKGROUND INFO */
+@media (max-width: 992px) {
+  .background-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 500px);
+    gap: 1.5rem;
+  }
+}
+
+/*  STYLE LANGUAGE, SKILL */
+/* STYLE CERTIFICATE */
+@media (max-width: 992px) {
+  .certificate-info {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .certificate-info img {
+    width: 30vw;
+  }
+  .certificate-info:nth-child(2) {
+    position: relative;
+  }
+  .certificate-info:nth-child(2)::before {
+    position: absolute;
+    left: -1rem;
+    top: 1.5rem;
+    height: 90%;
+  }
+}
+
+/* STYLE PROJECT */
+@media (max-width: 992px) {
+  .project-details {
+    gap: 1.2rem;
+  }
+  .project-name-time {
+    font-size: 0.8rem;
+  }
+  .project-name p {
+    word-spacing: 0.2rem;
+  }
+  .project-name table td:first-of-type {
+    width: auto;
+  }
+}
+
+/* STYLE FOOTER - CONTACT */
+@media (max-width: 992px) {
+  .contact {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .contact li i {
+    font-size: 1.5rem;
+  }
+}

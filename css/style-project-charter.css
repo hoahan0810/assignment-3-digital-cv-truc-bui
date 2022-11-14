@@ -1,0 +1,121 @@
+/* LAPTOP SCREEN */
+:root {
+  --primary-color: #2b7a0b;
+  --primary-color-rgb: 43, 122, 11;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+header {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+}
+header button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+main {
+  margin: 0 1.5rem 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+@media (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  /* .grid {
+    grid-template-columns: 1fr 3fr;
+  } */
+}
+.grid > div:nth-child(odd) {
+  justify-self: center;
+  align-self: center;
+}
+h3 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+h4 {
+  font-weight: 700;
+}
+i {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 992px) {
+  .goals {
+    grid-column: 1 / 3;
+  }
+
+  .team {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .scopes {
+    grid-column: 1 / 3;
+  }
+
+  .primary {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .timeline {
+    grid-column: 4/-1;
+    grid-row: 1/-1;
+  }
+}
+
+.timeline .grid {
+  row-gap: 1rem;
+}
+.timeline .grid > div:nth-child(odd) {
+  box-sizing: border-box;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: rgba(var(--primary-color-rgb), 0.7);
+}
+.timeline .grid > div:nth-child(even) {
+  border-bottom: 2px dotted var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+.timeline .grid > div:nth-child(even) p:last-child {
+  margin-bottom: 0;
+}
+
+/* TABLET SCREEN */
+@media (max-width: 992px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+/*---> ở tablet em vẫn để icon nằm bên trái để UI-UX ok hơn */
+
+/* MOBILE SCREEN */
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .timeline .grid {
+    gap: 0;
+  }
+  .timeline .grid > div:nth-child(odd):not(:first-child) {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,88 @@
+/* @media screen and (max-width: 576px){} */
+
+/* BANNER */
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+  .banner p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+/* NAV BAR */
+@media (max-width: 576px) {
+  .nav-bar-content {
+    flex-direction: column;
+    border: none;
+  }
+  .nav-bar a:link,
+  .nav-bar a:visited {
+    border-left: none;
+    padding: 0.4rem 0;
+  }
+}
+
+/* STYLE PERSONAL INFO AND OBJECTIVE */
+@media (max-width: 768px) {
+  .target-person-info {
+    flex-direction: column;
+  }
+  .row > * {
+    padding: 1.5rem 2rem;
+  }
+}
+
+/* STYLE BACKGROUND INFO */
+@media (max-width: 768px) {
+  .background-content {
+    grid-template-columns: minmax(300px, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+  .background-content > div {
+    padding-bottom: 4rem;
+  }
+}
+
+/*  STYLE LANGUAGE, SKILL */
+@media (max-width: 768px) {
+  .language-details,
+  .skill-details {
+    padding-left: 3rem;
+  }
+}
+
+/* STYLE CERTIFICATE */
+@media (max-width: 768px) {
+  .certificate-details {
+    grid-template-columns: 1fr;
+  }
+  .certificate-info {
+    padding: 2rem 0.8rem 1rem;
+    gap: 1rem;
+  }
+  .certificate-info img {
+    width: 50vw;
+  }
+
+  .certificate-info:nth-child(2)::before {
+    display: none;
+  }
+  .certificate-info:last-child {
+    border-bottom: 2px solid #d6c08d;
+  }
+}
+
+/* STYLE PROJECT */
+@media (max-width: 768px) {
+  .project-details {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  .project-name table td:first-of-type {
+    width: 5.5rem;
+  }
+}
+/* STYLE FOOTER - CONTACT */
